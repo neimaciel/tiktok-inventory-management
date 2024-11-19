@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #5c6ac4;
+    --primary-darker: #202e78;
+  }
+  
+  body {
+    @apply bg-gray-50;
+  }
+}
+
+@layer components {
+  .stat-card {
+    @apply p-4 rounded-lg border border-gray-200 bg-white;
+  }
+  
+  .nav-item {
+    @apply flex items-center gap-2 px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .nav-item:hover {
+    @apply bg-gray-100;
+  }
+  
+  .nav-item.active {
+    @apply bg-primary text-white;
+  }
+}
+
+.Polaris-Card {
+  @apply shadow-sm;
+}
+
+.Polaris-Button--primary {
+  background: var(--primary) !important;
+}
+
+.Polaris-Button--primary:hover {
+  background: var(--primary-darker) !important;
+}
